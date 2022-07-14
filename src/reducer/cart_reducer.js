@@ -6,7 +6,7 @@ const reducer = (state, action) => {
     if (index === -1) {
       cart.push({ id, title, img, price, amount: 1 });
     } else {
-      cart[index].amount += 1 / 2;
+      cart[index].amount += 1;
     }
 
     return { ...state, cart };
