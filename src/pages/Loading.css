@@ -1,0 +1,66 @@
+body {
+  background-color: #e6e6e6;
+}
+
+.loading-content {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  margin: 100px auto;
+  overflow: hidden;
+  background: #e0e0e0;
+  box-shadow: 10px 10px 20px #cacaca, -10px -10px 20px #f6f6f6;
+}
+
+.loading-content .loading-content__center-part {
+  position: relative;
+  top: 50%;
+  z-index: 999;
+  height: 160px;
+  width: 160px;
+  transform: translateY(-50%);
+  margin-left: 20px;
+  border-radius: 100%;
+  background: #e6e6e6;
+  box-shadow: inset 5px 5px 20px #cfcfcf, inset -5px -5px 20px #fdfdfd;
+}
+
+.loading-content .loading-content__loader {
+  position: absolute;
+  left: 92.5px;
+  /* (width of loading-content / 2) - (width of content__loader / 2) */
+  top: 0;
+  height: 100%;
+  width: 15px;
+  -webkit-animation: spin 2s infinite linear;
+}
+
+.loading-content .loading-content__loader .loading-content__loader-content {
+  height: 40px;
+  width: 100%;
+  background-color: #59bfff;
+  box-shadow: 0 0 10px 1px #59bfff;
+}
+
+/* Spin endless */
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
